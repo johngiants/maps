@@ -1,7 +1,9 @@
 maps
 ==============================
 
-geo tracking of my google maps places
+Project has two phases:
+- interactive geotracking of Google Maps data
+- modern visualization of visited countries (meant for prints)
 
 Project Organization
 ------------
