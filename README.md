@@ -9,7 +9,7 @@ The final output looks like this:
 
 ![Desk 1](https://github.com/johngiants/maps/tree/master/reports/final/desk_map_1.jpg)
 
-![Desk 2](https://github.com/johngiants/maps/tree/master/reports/final/desk_map_2.jpg)
+![Desk 2](reports/final/desk_map_2.jpg)
 
 How to:
 ==============================
