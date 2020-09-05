@@ -1,6 +1,3 @@
-## TO DO
-
-
 .PHONY: clean data lint requirements sync_data_to_s3 sync_data_from_s3
 
 #################################################################################
@@ -22,6 +19,16 @@ endif
 #################################################################################
 # COMMANDS                                                                      #
 #################################################################################
+
+download_data:
+	@[ -f ./data/external/ne_10m_admin_0_boundary_lines_land.zip ] && echo "boundary shape file exists" || wget -O ./data/external/ne_10m_admin_0_boundary_lines_land.zip "https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_boundary_lines_land.zip" && unzip ./data/external/ne_10m_admin_0_boundary_lines_land.zip -d ./data/external/boundary/ && rm ./data/external/ne_10m_admin_0_boundary_lines_land.zip
+	@[ -f ./data/external/ne_10m_admin_0_countries.zip ] && echo "country shape file exists" || wget -O ./data/external/ne_10m_admin_0_countries.zip "https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip" && unzip ./data/external/ne_10m_admin_0_countries.zip -d ./data/external/country/ && rm ./data/external/ne_10m_admin_0_countries.zip
+	@[ -f ./data/external/ne_110m_land.zip ] && echo "land shape file exists" || wget -O ./data/external/ne_110m_land.zip "https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/physical/ne_110m_land.zip" && unzip ./data/external/ne_110m_land.zip -d ./data/external/land/ && rm ./data/external/ne_110m_land.zip
+	@[ -f ./data/external/ne_10m_ocean.zip ] && echo "ocean shape file exists" || wget -O ./data/external/ne_10m_ocean.zip "https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_ocean.zip" && unzip ./data/external/ne_10m_ocean.zip -d ./data/external/ocean/ && rm ./data/external/ne_10m_ocean.zip
+	@[ -f ./data/external/ne_50m_populated_places.zip ] && echo "populated shape file exists" || wget -O ./data/external/ne_50m_populated_places.zip "https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/cultural/ne_50m_populated_places.zip" && unzip ./data/external/ne_50m_populated_places.zip -d ./data/external/populated/ && rm ./data/external/ne_50m_populated_places.zip
+	@[ -f ./data/external/ne_10m_roads.zip ] && echo "roads shape file exists" || wget -O ./data/external/ne_10m_roads.zip "https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_roads.zip" && unzip ./data/external/ne_10m_roads.zip -d ./data/external/roads/ && rm ./data/external/ne_10m_roads.zip
+	@[ -f ./data/external/ne_10m_admin_1_states_provinces.zip ] && echo "states shape file exists" || wget -O ./data/external/ne_10m_admin_1_states_provinces.zip "https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_1_states_provinces.zip" && unzip ./data/external/ne_10m_admin_1_states_provinces.zip -d ./data/external/states/ && rm ./data/external/ne_10m_admin_1_states_provinces.zip
+	@[ -f ./data/external/ne_10m_urban_areas.zip ] && echo "urban shape file exists" || wget -O ./data/external/ne_10m_urban_areas.zip "https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_urban_areas.zip" && unzip ./data/external/ne_10m_urban_areas.zip -d ./data/external/urban/ && rm ./data/external/ne_10m_urban_areas.zip
 
 ## Install Python Dependencies
 requirements: test_environment
