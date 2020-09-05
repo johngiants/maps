@@ -1,13 +1,13 @@
 maps
 ==============================
 
-This project went through two phases:
-    - interactive geotracking of my Google Maps data
+This project went through two phases: <br>
+    - interactive geotracking of my Google Maps data <br>
     - modern visualizations of countries I visited with the purpose of creating a "map room" in my apartment
     
 The final output looks like this:
 
-![Desk 1](https://github.com/johngiants/maps/tree/master/reports/final/desk_map_1.jpg)
+![Desk 1](reports/final/desk_map_1.jpg)
 
 ![Desk 2](reports/final/desk_map_2.jpg)
 
